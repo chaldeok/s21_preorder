@@ -1,0 +1,197 @@
+.main-tech {}
+
+.main-container--tech {
+  background-color: #fcfcfc;
+}
+
+.main-tech__inner {
+  display: flex;
+}
+
+.main-tech__left {}
+
+.main-tech__right {}
+
+.main-tech__desc {
+  h2 {
+    font-family: $font-title;
+    @include adaptive-font(48, 25)
+  }
+  p {
+    font-family: $font-text;
+    @include adaptive-font(28, 14)
+  }
+}
+
+.main-tech__desc-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-details__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.desc-details__row-last {
+  margin: 0;
+}
+
+.desc-details__icon {
+  display: block;
+}
+
+.desc-details__text {
+  width: 80%;
+}
+
+.main-tech__button {
+  display: flex;
+}
+
+.button-learn-more {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+
+  &:hover,
+  &:focus {
+    background-color: darken(white, 7%);
+  }
+  &:active {
+    background-color: darken(white, 12%);
+  }
+}
+
+@include media-xs {
+  .main-tech__inner {
+    flex-direction: column;
+  }
+
+  .main-tech__left {
+    order: 2;
+    height: 321px;
+    background-image: url("../img/tech-chars_mob.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .main-tech__right {
+    order: 1;
+  }
+
+  .main-tech__desc {
+    margin: 0 0 30px 0;
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .main-tech__desc-details {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .main-tech__button {
+    justify-content: center;
+  }
+
+  .button-learn-more {
+    padding: 20px;
+  }
+}
+
+@include media-s {
+  .main-tech__left {
+    height: 600px;
+  }
+
+  .main-tech__desc {
+    margin: 0 0 65px 0;
+    h2 {
+      @include adaptive-font(72, 25)
+    }
+    p {
+      @include adaptive-font(48, 14)
+    }
+  }
+
+  .main-tech__desc-details {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .desc-details__row {
+    justify-content: space-evenly;
+  }
+}
+
+@include media-m {
+  .main-container--tech {
+    height: 600px;
+    background-image: url("../img/tech-chars_desk.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .main-tech__inner {
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .main-tech__left {
+    order: 1;
+    height: auto;
+    width: auto;
+    background-image: none;
+  }
+
+  .main-tech__right {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .main-tech__desc {
+    margin: 0 0 50px 0;
+    width: 80%;
+    h2 {
+      @include adaptive-font(36, 20);
+      text-align: left;
+    }
+    p {
+      @include adaptive-font(21, 11)
+    }
+  }
+
+  .main-tech__desc-details {
+    width: 100%;
+  }
+
+  .desc-details__row {
+    justify-content: space-between;
+  }
+
+  .desc-details__icon {
+    margin: 0 16px 0 0;
+  }
+
+  .desc-details__text {
+    width: 90%;
+  }
+
+  .main-tech__button {
+    justify-content: flex-start;
+    width: 80%;
+  }
+
+  .button-learn-more {
+    width: 190px;
+  }
+}

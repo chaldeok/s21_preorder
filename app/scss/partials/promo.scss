@@ -1,0 +1,462 @@
+.main-promo {
+  color: white;
+}
+
+.main-container--promo {
+  background-color: #1b1b1b;
+}
+
+.main-promo__inner {
+
+}
+
+.main-promo__desc {
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-family: $font-title;
+    @include adaptive-font(60, 32);
+  }
+
+  p {
+    font-family: $font-text;
+    @include adaptive-font(22, 16);
+  }
+}
+
+.button-basic {
+  font-family: $font-btn;
+  border-radius: 31px;
+  @include adaptive-font(18, 14);
+  text-transform: uppercase;
+  padding: 20px 0;
+  transition: all .23s ease-out;
+}
+
+.main-promo__right {
+  width: 100%;
+}
+
+.galaxy-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
+@include media-xs {
+  .main-promo__left {
+    padding-top: 32px;
+    margin: 0 0 50px 0;
+  }
+
+  .main-promo__desc {
+    margin: 0 0 52px 0;
+  }
+
+  .main-promo__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-basic {
+    width: 94%;
+  }
+
+  .button-preorder-online {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    margin: 0 0 27px 0;
+
+    &:hover,
+    &:focus {
+      background-color: darken(white, 15%);
+      border-color: darken(white, 15%);
+    }
+    &:active {
+      background-color: darken(white, 25%);
+    }
+  }
+
+  .button-preorder-shop {
+    background-color: #1b1b1b;
+    color: white;
+    border: 1px solid white;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(black, 15%);
+      border-color: lighten(black, 15%);
+    }
+    &:active {
+      background-color: lighten(black, 10%);
+    }
+  }
+
+  .main-promo__right {
+    text-align: center;
+  }
+}
+
+@include media-s {
+  .main-promo__desc {
+    h1 {
+      margin: 0 0 41px 0;
+    }
+    p {
+      @include adaptive-font(49.5, 16);
+    }
+  }
+
+  .button-basic {
+    width: 58%;
+  }
+
+  .galaxy-img {
+    width: 90%;
+  }
+}
+
+@include media-m {
+  .main-container--promo {
+    padding: 0 0 0 $spacing;
+    overflow: hidden;
+  }
+
+  .main-promo__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 72px 0 0 0;
+  }
+
+  .main-promo__left {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 50%;
+    padding: 0 0 0 24px;
+  }
+
+  .main-promo__desc {
+    margin: 0 0 52px 0;
+
+    h1 {
+      @include adaptive-font(42, 19);
+      margin: 0 0 27px 0;
+    }
+    p {
+      @include adaptive-font(22, 14);
+      margin: 0;
+
+      &:nth-child(2) {
+        margin: 0 0 40px 0;
+      }
+    }
+    h1,
+    p {
+      text-align: left;
+    }
+  }
+
+  .main-promo__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .button-basic {
+    padding: 18px;
+    @include adaptive-font(14, 12)
+  }
+
+  .button-preorder-online {
+    max-width: 208px;
+    margin: 0 16px 16px 0;
+    background-color: black;
+    border-color: black;
+    color: white;
+  }
+
+  .button-preorder-shop {
+    flex-grow: 1;
+    max-width: 290px;
+    margin: 0 0 16px 0;
+    background-color: #1b1b1b;
+    border-color: black;
+    color: black;
+  }
+
+  .main-promo__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 -200px 0 0;
+    //border: 1px solid red;
+  }
+
+  .galaxy-img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@include media-xl {
+  .main-promo__right {
+    margin: 0;
+  }
+}
+
+/*.main-container--promo {
+  background-color: #1b1b1b;
+}
+
+.main-promo__inner {
+  color: white;
+}
+
+.main-promo__desc {
+  h1 {
+    margin: 0;
+    font-family: $font-title;
+    @include adaptive-font(42, 34);
+  }
+
+  p {
+    font-family: $font-text;
+    @include adaptive-font(28, 16);
+    &:nth-child(2) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.main-promo__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button-basic {
+  font-family: $font-btn;
+  text-transform: uppercase;
+  border-radius: 31px;
+  background-color: #ffffff;
+
+  transition: all .23s ease-out;
+}
+
+.main-promo__galaxy {
+  width: 100%;
+  //border: 1px solid white;
+  .galaxy-img {
+    display: block;
+    object-fit: contain;
+  }
+}
+
+@include media-xs {
+  .main-container--promo {
+    padding-top: 52px;
+  }
+
+  .main-promo__desc {
+    h1 {
+      font-size: 31px;
+      margin-bottom: 31px;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+
+  .main-promo__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 47px;
+    margin-bottom: 50px;
+  }
+
+  .button-basic {
+    font-size: 14px;
+    padding: 22px;
+    width: 300px;
+    &:first-child {
+      margin-bottom: 27px;
+
+      &:hover,
+      &:focus {
+        background-color: darken(white, 18%);
+      }
+
+      &:active {
+        background-color: darken(white, 28%);
+      }
+    }
+  }
+
+  .button-preorder-shop {
+    color: white;
+    background-color: #1b1b1b;
+    border: 1px solid white;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(#1b1b1b, 18%);
+    }
+
+    &:active {
+      background-color: darken(#1b1b1b, 5%);
+    }
+  }
+
+  .galaxy-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@include media-s {
+  .main-container--promo {
+    padding-top: 72px;
+  }
+
+  .main-promo__desc {
+    h1 {
+      margin-bottom: 41px;
+      font-size: 48px;
+    }
+    p {
+      font-size: 28px;
+    }
+  }
+
+  .main-promo__buttons {
+    margin-top: 67px;
+  }
+
+  .button-basic {
+    font-size: 16px;
+    width: 361px;
+    &:first-child {
+
+      &:hover,
+      &:focus {
+        background-color: darken(white, 18%);
+      }
+
+      &:active {
+        background-color: darken(white, 28%);
+      }
+    }
+  }
+
+  .galaxy-img {
+    width: 80%;
+  }
+}
+
+@include media-m {
+  .main-container--promo {
+    padding-top: 0;
+    padding-right: 0;
+  }
+
+  .main-promo__inner {
+    display: flex;
+    justify-content: space-between;
+    //height: 600px;
+    padding-left: 70px;
+  }
+
+  .main-promo__desc {
+    align-self: center;
+    width: 50%;
+    h1 {
+      font-size: 42px;
+      margin-bottom: 27px;
+    }
+    p {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h1,
+    p {
+      text-align: left;
+    }
+  }
+
+  .main-promo__buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 52px;
+    margin-bottom: 0;
+  }
+
+  .button-basic {
+    width: 208px;
+    padding: 18px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: white;
+
+    &:first-child {
+      margin-bottom: 0;
+      margin-right: 16px;
+
+      &:hover,
+      &:focus {
+        background-color: lighten(black, 20%);
+        border-color: lighten(black, 20%);
+      }
+      &:active {
+        background-color: lighten(black, 15%);
+      }
+    }
+  }
+
+  .button-preorder-shop {
+    width: 326px;
+    background-color: #1b1b1b;
+    color: #000000;
+    border: 1px solid #000000;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(black, 20%);
+      border-color: lighten(black, 20%);
+    }
+
+    &:active {
+      background-color: lighten(black, 15%);
+    }
+  }
+
+  .main-promo__galaxy {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 50%;
+    margin-top: 68px;
+    border: 1px solid red;
+  }
+  .galaxy-img {
+    align-self: end;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@include media-xl {
+  .main-promo__galaxy {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}*/

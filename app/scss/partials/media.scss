@@ -1,0 +1,55 @@
+//mobile first
+$screen-xs: 320px;
+$screen-s: 414px;
+$screen-m: 721px;
+$screen-l: 1440px;
+$screen-xl: 1441px;
+
+// from 320px to 413px
+@mixin media-xs {
+  @media (min-width: $screen-xs) {
+    @content
+  }
+}
+// from 414px to 720px
+@mixin media-s {
+  @media (min-width: $screen-s) {
+    @content
+  }
+}
+// from 721px to 1440px
+@mixin media-m {
+  @media (min-width: $screen-m) {
+    @content
+  }
+}
+// from 1441 and above
+@mixin media-xl {
+  @media (min-width: $screen-xl) {
+    @content
+  }
+}
+
+// desktop first
+/*$screen-1440: 1440px;
+$screen-720: 720px;
+$screen-413: 413px;
+
+// from 1440 and above
+@mixin media-1440 {
+  @media screen and (min-width: $screen-1440) {
+    @content
+  }
+}
+// from 414px to 720px
+@mixin media-767 {
+  @media screen and (max-width: $screen-720) {
+    @content
+  }
+}
+// from 320px to 413px
+@mixin media-413 {
+  @media screen and (max-width: $screen-413) {
+    @content
+  }
+}*/
